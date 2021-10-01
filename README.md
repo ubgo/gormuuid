@@ -6,7 +6,7 @@ A Postgres uuid[] field for gorm.io
 
 ```go
 type User struct {
-	TagIDs         gormuuid.UUIDArray  `gorm:"type:uuid[]"` // Column will take {} as default
+  TagIDs gormuuid.UUIDArray  `gorm:"type:uuid[]"` // Column will take {} as default
 }
 
 var tagIds gormuuid.UUIDArray = []uuid.UUID{uuid.New(), uuid.New()}
