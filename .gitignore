@@ -1,0 +1,7 @@
+# Idea Directory
+.idea
+
+.DS_Store
+
+# vendor
+vendor
