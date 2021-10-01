@@ -2,6 +2,11 @@
 
 A Postgres uuid[] field for gorm.io
 
+## Installation
+```
+go get github.com/ubgo/gormuuid
+```
+
 ## How to use
 
 ```go

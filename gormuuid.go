@@ -35,7 +35,12 @@ func (a UUIDArray) Value() (driver.Value, error) {
 
 // Scan implements the sql.Scanner interface
 func (uidarray *UUIDArray) Scan(v interface{}) error {
-	parsed := gouuid.PgStringArrayToUUIDSlide(v.(string))
+	val := ""
+	switch s := v.(type) {
+	case []byte:
+		val = string(s)
+	}
+	parsed := gouuid.PgStringArrayToUUIDSlide(val)
 	*uidarray = parsed
 	return nil
 }
