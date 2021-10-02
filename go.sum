@@ -2,3 +2,5 @@ github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/ubgo/gouuid v0.0.1 h1:Wbcb5cdw4Vf4EQZboPMscgNTgC7dFMjsfghXNTAoX9o=
 github.com/ubgo/gouuid v0.0.1/go.mod h1:wcCyC0snR0yovyXyLHIrskUrFUybY7+8cK72TRad1HI=
+github.com/ubgo/gouuid v0.0.2 h1:ZCydOWMIiMZvp9Dqjx9PFC4ig19LOGtxJoP3IYX4Yhk=
+github.com/ubgo/gouuid v0.0.2/go.mod h1:wcCyC0snR0yovyXyLHIrskUrFUybY7+8cK72TRad1HI=

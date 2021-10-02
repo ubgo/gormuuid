@@ -35,12 +35,18 @@ func (a UUIDArray) Value() (driver.Value, error) {
 
 // Scan implements the sql.Scanner interface
 func (uidarray *UUIDArray) Scan(v interface{}) error {
-	val := ""
-	switch s := v.(type) {
-	case []byte:
-		val = string(s)
+	func (uidarray *UUIDArray) Scan(v interface{}) error {
+		val := ""
+		switch s := v.(type) { 
+		case []byte: // if used sql.DB as driver and pass to gorm as conn then it returns []uint8
+			val = string(s)
+		case string: // if used using gorm driver then it returns as string
+			val = string(s)
+		}
+		
+		parsed := gouuid.PgStringArrayToUUIDSlide(val)
+		*uidarray = parsed
+		return nil
 	}
-	parsed := gouuid.PgStringArrayToUUIDSlide(val)
-	*uidarray = parsed
-	return nil
+	
 }
